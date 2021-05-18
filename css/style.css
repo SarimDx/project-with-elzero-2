@@ -26,7 +26,9 @@ ul {
  list-style: none;
  
 }
-
+button,a,.form,.change-background,.portfolio .shuffle li,.landing .bullets  li,.our-skills .testimonials .bullets li {
+  cursor: pointer;
+}
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -192,6 +194,9 @@ header nav .form i {
   transform: translateY(-50%);
   right: 0;
 }
+header nav .form:hover i {
+  color: blue;
+}
 /* ? End header */
 
 
@@ -252,6 +257,9 @@ header nav .form i {
   transform: translateY(-50%);
   color: #ddd;
 }
+.landing .change-background:hover {
+  color: var(--main-color);
+}
 @media (max-width: 767px) {
   .landing .change-background {
     display: none;
@@ -277,9 +285,15 @@ header nav .form i {
   border-radius: 50%;
   margin-right: 10px;
 }
+.landing .bullets  li:hover {
+  border-color: var(--main-color) ;
+}
 .landing .bullets li.active {
   background-color: var(--main-color);
   border-color: var(--main-color);
+}
+.landing .bullets li.active:hover {
+  border: 4px solid white;
 }
 /* ? End landing */
 
@@ -402,9 +416,17 @@ header nav .form i {
 .portfolio .shuffle li {
   padding: 10px;
 }
+.portfolio .shuffle li:hover {
+  background-color: var(--main-color);
+  color: white;
+}
 .portfolio .shuffle li.active {
   background-color: var(--main-color);
   color: white;
+}
+.portfolio .shuffle li.active:hover {
+  background-color: white;
+  color: black;
 }
 .portfolio .imgs-container {
   display: flex;
@@ -420,6 +442,9 @@ header nav .form i {
 }
 .portfolio .imgs-container .box:hover img {
   transform: rotate(-3deg) scale(1.1);
+}
+.portfolio .imgs-container .box img {
+  cursor: -webkit-grabbing;
 }
 @media (min-width: 768px) {
   .portfolio .imgs-container .box {
@@ -502,6 +527,11 @@ width: 100%;
   background-color: black;
   padding: 10px 20px;
   border: none;
+}
+.video .text button:hover {
+  background-color: var(--main-color);
+  color: black;
+  font-weight: bold;
 }
 /* ? End video  */
 
@@ -661,9 +691,15 @@ width: 100%;
   border-radius: 50%;
   margin-right: 10px;
 }
+.our-skills .testimonials .bullets li:hover {
+  border-color: var(--main-color);
+}
 .our-skills .testimonials .bullets li.active {
   background-color: var(--main-color);
   border-color: var(--main-color);
+}
+.our-skills .testimonials .bullets li.active:hover {
+  border: 1px solid white;
 }
 .our-skills .skills .prog-holder {
  margin-bottom: 40px;
@@ -707,3 +743,39 @@ width: 100%;
   
 }
 /* ? End Skills  */
+
+
+/* ? Start Quote */
+.quote {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  background-image: url(../img/doctor\ 2.jpg);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.quote::before  {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+.quote .container {
+  position: relative;
+  height: 400px;
+  transform: translateY(50%);
+}
+.quote .container q {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+.quote .container a {
+  text-decoration: none;
+  color: blue;
+}
+/* ? End Quote */
