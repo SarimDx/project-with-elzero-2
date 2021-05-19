@@ -195,7 +195,7 @@ header nav .form i {
   right: 0;
 }
 header nav .form:hover i {
-  color: blue;
+  color: var(--main-color);
 }
 /* ? End header */
 
@@ -753,7 +753,7 @@ width: 100%;
   background-size: cover;
   position: relative;
   text-align: center;
-  color: white;
+  color: #EEEEEE;
 }
 .quote::before  {
   content: "";
@@ -766,8 +766,18 @@ width: 100%;
 }
 .quote .container {
   position: relative;
-  height: 400px;
+  height: 100vh;
   transform: translateY(50%);
+}
+@media (max-width:768px) {
+  .quote {
+    background-image: url(../img/doctor.jpg);
+  background-size: cover;
+  }
+  .quote .container{
+    color: #EEEEEE;
+    transform: translateY(0%);
+  }
 }
 .quote .container q {
   font-size: 30px;
@@ -776,6 +786,6 @@ width: 100%;
 }
 .quote .container a {
   text-decoration: none;
-  color: blue;
+  color: var(--main-color);
 }
 /* ? End Quote */
